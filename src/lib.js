@@ -67,19 +67,17 @@ const questions = [
 ];
 
 const templateQuestion = ({ text, options }, id) => `
-  <div id="epistaxis-${id}">
+  <div id="epistaxis-${id}" class="epistaxis-question">
   <p>
     ${text}
   </p>
   ${options
     .map(
       ({ text }, index) => `
-      <label for="epistaxis-${id}-${index}">
       <input type="radio" id="epistaxis-${id}-${index}" name="epistaxis-${id}" value="${index}" />
       <label for="epistaxis-${id}-${index}">
-        ${text}
-
-        </label>
+      ${text}
+      </label>
   `
     )
     .join("\n")}
@@ -89,7 +87,7 @@ const templateQuestion = ({ text, options }, id) => `
 
 const templateControls = () => `
   <div>
-    <button type="submit">Calculate Score</button>
+    <!-- <button type="submit">Calculate Score</button> -->
     <div>
       <p>Calculated Score</p>
       <div id="epistaxis-score"> — </div>
@@ -116,18 +114,15 @@ const calculateScore = (values) => {
 window.epistaxisRenderTo = (targetId = "target") => {
   const node = document.getElementById(targetId);
   node.innerHTML = templateApp();
+  const form = document.getElementById("epistaxis-form");
 
-  document.getElementById("epistaxis-form").addEventListener("submit", (e) => {
-    e.preventDefault();
-    const data = Array.from(new FormData(e.target).entries());
-
+  form.addEventListener("click", (e) => {
+    const data = Array.from(new FormData(form).entries());
     if (data.length !== questions.length) {
-      alert("please answer all the questions");
       return;
     }
 
     const value = calculateScore(data.map(([_, val]) => val));
-
-    document.getElementById("epistaxis-score").innerText = value;
+    document.getElementById("epistaxis-score").innerText = value.toFixed(3);
   });
 };

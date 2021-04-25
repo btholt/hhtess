@@ -1,0 +1,43 @@
+#epistaxis-form {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  text-align: center;
+  border: 1px solid #0074d9;
+  padding: 5px;
+}
+
+#epistaxis-form * {
+  box-sizing: border-box;
+}
+
+#epistaxis-form label {
+  color: #0074d9;
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px 15px;
+  font-size: 15px;
+  border-color: transparent;
+  cursor: pointer;
+  border: 1px solid #0074d9;
+  margin-right: 3px;
+  display: inline-block;
+}
+
+#epistaxis-form input[type="radio"] {
+  display: none;
+}
+
+#epistaxis-form input[type="radio"]:checked + label {
+  background-color: #0074d9;
+  color: white;
+}
+
+#epistaxis-form .epistaxis-question {
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #0074d9;
+}
+
+#epistaxis-form p {
+  margin: 3px 0 6px 0;
+}
