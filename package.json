@@ -1,0 +1,19 @@
+{
+  "name": "epistaxis",
+  "version": "1.0.0",
+  "description": "questionaire to calculate severity score for patients with Hereditary Hemorrhagic Telangiectasia",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/btholt/epistaxis.git"
+  },
+  "author": "Brian Holt",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/btholt/epistaxis/issues"
+  },
+  "homepage": "https://github.com/btholt/epistaxis#readme"
+}
