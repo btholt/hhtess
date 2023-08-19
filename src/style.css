@@ -10,7 +10,7 @@
   box-sizing: border-box;
 }
 
-#epistaxis-form label {
+#epistaxis-form label, #epistaxis-form #print {
   color: #0074d9;
   background-color: white;
   border-radius: 5px;
@@ -27,9 +27,14 @@
   display: none;
 }
 
-#epistaxis-form input[type="radio"]:checked + label {
+#epistaxis-form input[type="radio"]:checked + label, #epistaxis-form #print {
   background-color: #0074d9;
   color: white;
+}
+
+#epistaxis-form #print:disabled {
+  opacity: .6;
+  cursor: not-allowed;
 }
 
 #epistaxis-form .epistaxis-question {
@@ -40,4 +45,38 @@
 
 #epistaxis-form p {
   margin: 3px 0 6px 0;
+}
+
+#epistaxis-form .instructions {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#epistaxis-form img {
+  max-width: 450px;
+  margin: 15px auto;
+  width: 100%;
+}
+
+#epistaxis-form .hidden {
+  visibility: hidden;
+}
+
+#epistaxis-score {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media print {
+  #epistaxis-form label {
+    display: none;
+  }
+
+  #epistaxis-form input[type="radio"]:checked + label {
+    display: inline-block;
+  }
+
+  #epistaxis-form #print {
+    display: none;
+  }
 }
