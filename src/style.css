@@ -4,6 +4,9 @@
   text-align: center;
   border: 1px solid #0074d9;
   padding: 5px;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1000px;
 }
 
 #epistaxis-form * {
@@ -20,6 +23,7 @@
   cursor: pointer;
   border: 1px solid #0074d9;
   margin-right: 3px;
+  margin-bottom: 6px;
   display: inline-block;
 }
 
@@ -44,16 +48,26 @@
 }
 
 #epistaxis-form p {
-  margin: 3px 0 6px 0;
+  margin: 3px auto 6px auto;
 }
 
 #epistaxis-form .instructions {
   font-size: 20px;
-  margin-bottom: 10px;
+  margin: 40px auto 20px auto;
 }
 
-#epistaxis-form img {
-  max-width: 450px;
+#epistaxis-form .footnote {
+  font-size: 10px;
+}
+
+#epistaxis-form #scale {
+  max-width: 550px;
+  margin: 15px auto;
+  width: 100%;
+}
+
+#epistaxis-form .cure-htt-logo {
+  max-width: 350px;
   margin: 15px auto;
   width: 100%;
 }
@@ -76,7 +90,8 @@
     display: inline-block;
   }
 
-  #epistaxis-form #print {
+  #epistaxis-form #print, 
+  #epistaxis-form .intro-text {
     display: none;
   }
 }
